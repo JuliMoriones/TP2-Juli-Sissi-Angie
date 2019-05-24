@@ -20,6 +20,11 @@ var blankText = function (list, noText) {
 var createLi = function (task, index) {
     // crea las li
     listItem = document.createElement('li')
+    //var input = cretae input;
+    //input.value = task.text
+    //input.disabled = true (fijate)
+    //input.classlist.add('hidden')
+
     listItem.innerText = task.text
     listItem.classList.add('task')
     var toggleImage;
@@ -50,6 +55,18 @@ var createButton = function (classBtn, index, btnFunction) {
     return btn
 }
 
+
+var editItem = function(){
+    // input.disabled = false;
+    // input.classList.remove('hidden')
+    // input.onKeyPress = function(event){ actuallyEditItem(e, input) }
+}
+
+var actuallyEditItem = function(e, input){
+    // valida que sea el enter
+    // allTasks[btn.id].text = input.value
+    // reimprime todo al carajo
+}
 
 var toggleTask = function (btn) {
     allTasks[btn.id].isCompleted = !allTasks[btn.id].isCompleted
