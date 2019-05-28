@@ -30,12 +30,10 @@ Optamos por separar un archivo con variables para que el archivo de diseño prin
 Js
 Hicimos el codigo basandoos en lo que vimos en clase (en especial el repo de funciones dos)
 Pedimos mucha ayuda para poder hacer ciertos condicionales como el cambio de icono de pending a completed (gracias)
-
-Branch Test (js2)
-Aca subimos el pop-up/alert para confirmar el delete e intentamos hacer el boton de Edit para editar texto de las tareas sin completar (keyWord 'intentamos', js se me rio en la cara)
+Subimos el pop-up/alert para confirmar el delete e intentamos hacer el boton de Edit para editar texto de las tareas sin completar (keyWord 'intentamos', js se me rio en la cara)
 
 Local storage andando.
 
 
-Gracias a mi viejo por hacerme del mas grande (javaScript)
-Gracias mike por tu magia (a vos sabri tambien)
+Gracias viejo por hacerme del mas grande (javaScript)
+Gracias mike por tu magia (a vos sabri tambien <3)
