@@ -24,7 +24,7 @@ Html
 Hicimos un archivo de html con todo lo que se necesitaba para poder ver el diseño sin renegar. por eso tiene muchas cosas comentadas.
 
 Sass
-Hicimos el diseño con Sass, tratando de poner en practica el uso de variables y mixin's.
+Hicimos el diseño con Sass, tratando de poner en practica el uso de variables y mixins.
 Optamos por separar un archivo con variables para que el archivo de diseño principal no tenga tantas lineas de codigo y sea mas entendible.
 
 Js
