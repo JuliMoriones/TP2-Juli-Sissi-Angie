@@ -22,6 +22,12 @@ var createLi = function (task, index) {
     listItem = document.createElement('li')
     listItem.innerText = task.text
     listItem.classList.add('task')
+
+    var input = document.createElement('input');
+    input.value = task.text
+    input.disabled = true
+    input.classList.add('hidden')
+	
     var toggleImage;
 
     allButtons = document.createElement('div')
@@ -35,6 +41,7 @@ var createLi = function (task, index) {
 
     allButtons.appendChild(createButton('trash', index, deleteTask))
     allButtons.appendChild(createButton(toggleImage, index, toggleTask))
+    allButtons.appendChild(createButton('edit', index, editTask))
     listItem.appendChild(allButtons)
     return listItem
 
@@ -66,6 +73,12 @@ var deleteTask = function (btn) {
 
 }
 
+var editTask = function (btn) {
+   
+     input.disabled = false;
+     input.classList.remove('hidden')
+     input.onKeyPress = function(event){ actuallyEditItem(e, input) }
+}
 var printTask = function () {
     toDo = document.getElementById('todo')
     toDo.innerHTML = ''
@@ -111,3 +124,19 @@ var onLoad = function(){
     printTask()
 }
 
+//var editItem = function(){
+    // input.disabled = false;
+    // input.classList.remove('hidden')
+    // input.onKeyPress = function(event){ actuallyEditItem(e, input) }
+//}
+
+//var actuallyEditItem = function(e, input){ allTasks[btn.id].text = input.value}
+	
+	
+//	ar createLi = function (task, index) {
+    // crea las li
+    //listItem = document.createElement('li')
+    //var input = cretae input;
+    //input.value = task.text
+    //input.disabled = true (fijate)
+    //input.classlist.add('hidden')
