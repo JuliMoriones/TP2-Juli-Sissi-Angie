@@ -25,12 +25,16 @@ body {
 }
 .blank {
   font-weight: 700; //me baje el bold de la font, por eso solo el número
-  font-size: 16px;
+  font-size: 13px;
   color: $blue;
   text-align: center;
 }
 .line {
   text-decoration: line-through;
+}
+
+h2 {
+  font-size: 16px;
 }
 
 input {

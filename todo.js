@@ -32,11 +32,11 @@ var createLi = function (task, index) {
     allButtons = document.createElement('div')
     allButtons.classList.add('task-btns')
     //condicional para cambiar icono pending por completed cuando clickeas
-    if(!task.isCompleted){
+    if (!task.isCompleted) {
         toggleImage = 'pending'
     } else {        //gracias mike por tu magia
         toggleImage = 'completed'
-        listItem.classList.add('line')
+        listItem.classList.add('line') //gracias
     }
 
 
@@ -56,13 +56,13 @@ var createButton = function (classBtn, index, btnFunction) {
 }
 
 
-var editItem = function(){
+var editItem = function () {
     // input.disabled = false;
     // input.classList.remove('hidden')
     // input.onKeyPress = function(event){ actuallyEditItem(e, input) }
 }
 
-var actuallyEditItem = function(e, input){
+var actuallyEditItem = function (e, input) {
     // valida que sea el enter
     // allTasks[btn.id].text = input.value
     // reimprime todo al carajo
@@ -88,6 +88,7 @@ var printTask = function () {
     allTasks.map(function (task, index) {
         task.isCompleted ? completed.appendChild(createLi(task, index)) : todo.appendChild(createLi(task, index))
     })
+
     blankText(toDo, '¡Excelente!' + '\n\nNo tenés ninguna tarea pendiente')
     blankText(completed, '¡Ánimo!' + '\n\nCuando completes tus tareas van a aparecer acá')
 }

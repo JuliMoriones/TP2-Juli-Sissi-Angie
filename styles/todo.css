@@ -27,13 +27,17 @@ body {
 
 .blank {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 13px;
   color: #0099ff;
   text-align: center;
 }
 
 .line {
   text-decoration: line-through;
+}
+
+h2 {
+  font-size: 16px;
 }
 
 input {
@@ -111,7 +115,6 @@ input::placeholder {
   position: relative;
   float: left;
   width: 100%;
-  width: 100%;
   box-sizing: border-box;
   border-radius: 8px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.16);
@@ -168,7 +171,6 @@ input::placeholder {
 .completed-task-container .completed-task-list .task {
   position: relative;
   float: left;
-  width: 100%;
   width: 100%;
   box-sizing: border-box;
   border-radius: 8px;
