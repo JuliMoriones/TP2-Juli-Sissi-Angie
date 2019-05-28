@@ -12,8 +12,7 @@
     <link rel="icon" type="image/png" href="styles/images/list.png" />
 </head>
 
-<body onload="printTask()">
-    <!-- Barra para agregar tareas -->
+<body onload="onLoad()">
     <header class="add-task-container">
         <h1>Mi lista de tareas</h1>
         <h2 class="section-title">Agregá una tarea</h2>
@@ -23,60 +22,47 @@
                     alt=""></button>
         </div>
     </header>
-    <!-- Tareas -->
     <div class="tasks-container">
-        <!-- Tareas pendientes -->
         <div class="pending-task-container">
             <!-- <h2 class="section-title">Tareas pendientes</h2> -->
             <ul id="todo" class="pending-task-list">
-
-                <li class="task">
-
-                    <!-- <div class="task-text">
-                        <p>holis</p>
-                    <input type="text"> 
-                    </div> -->
-
-                    <div class="task-btns">
-                        <!-- <button><img id='svg' src="styles/images/edit.svg"></button> nice to have pero ni idea como hacer, investigare -->
+                <!-- <li class="task">
+                    <div class="task-text">
+                        <p>holis</p> 
+                       <input type="text"> 
+                    </div>
+                    <div class="task-btns"> 
+                        <button><img id='svg' src="styles/images/edit.svg"></button> nice to have pero ni idea como hacer, investigare
                         <button><img id='svg-trash' src="styles/images/trash.svg"></button>
                         <button><img id='svg-pending' src="styles/images/pending.svg"></button>
                     </div>
-
-                </li>
+                </li> -->
             </ul>
-            <!-- Sin tareas pendientes -->
             <!-- <div class="no-tasks">
                 <h2>¡Excelente!</h2>
                 <p>No tenés ninguna tarea pendiente</p>
             </div> -->
         </div>
-        <!-- Tareas completadas -->
         <div class="completed-task-container">
             <!-- <h2 class="section-title">Tareas completadas</h2> -->
             <ul id="completed" class="completed-task-list">
 
-                <li class="task">
-
-                    <!-- <div class="task-text">
+                <!--<li class="task">
+                    <div class="task-text">
                         <p>chau</p>
-                    </div> -->
-
+                    </div>
                     <div class="task-btns">
                         <button><img src="styles/images/trash.svg"></button>
                         <button><img src="styles/images/completed.svg"></button>
-                    </div>
+                    </div> 
 
-                </li>
+                </li>-->
             </ul>
-            <!-- Sin tareas completadas -->
             <!-- <div class="no-tasks">
                 <h2>¡Ánimo!</h2>
-                <p>Cuando completes tus tareas van a aparecer acá</p>
-            </div> -->
+                <p>Cuando completes tus tareas van a aparecer acá</p>-->
         </div>
     </div>
-
 </body>
 
 </html>
