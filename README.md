@@ -1,5 +1,22 @@
+2019:
 
-`sass styles/todo.scss styles/todo.css --watch` //reminder 
+Yo: creo que me salió 
+
+JavaScript: computer says nah
+
+2020
+
+                          (\__/)
+                         ⠀(•ㅅ•) nosotras 
+                       ＿ノ ヽ ノ＼ __ 
+                      /　`/ ⌒Ｙ⌒ Ｙ　ヽ 
+        (•_•)       ( 　(三ヽ人　 /　　 | 
+        (ง )ง        |　ﾉ⌒＼ ￣￣ヽ　 ノ    
+        /︶\          ヽ＿＿＿＞､＿＿_／ 
+        javascript
+
+
+
 
 Tp 2 To-do list (best ever)
 
@@ -21,5 +38,4 @@ Local storage andando.
 
 
 Gracias a mi viejo por hacerme del mas grande (javaScript)
-
-
+Gracias mike por tu magia (a vos sabri tambien)

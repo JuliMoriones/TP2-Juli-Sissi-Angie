@@ -17,35 +17,29 @@ var blankText = function (list, noText) {
     }
 }
 
-var createLi = function (task, index) {
-    // crea las li
-    listItem = document.createElement('li')
-    //var input = cretae input;
-    //input.value = task.text
-    //input.disabled = true (fijate)
-    //input.classlist.add('hidden')
 
+var createLi = function (task, index) {
+    listItem = document.createElement('li')
     listItem.innerText = task.text
     listItem.classList.add('task')
     var toggleImage;
 
     allButtons = document.createElement('div')
     allButtons.classList.add('task-btns')
-    //condicional para cambiar icono pending por completed cuando clickeas
-    if (!task.isCompleted) {
+    if(!task.isCompleted){
         toggleImage = 'pending'
-    } else {        //gracias mike por tu magia
+    } else {  
         toggleImage = 'completed'
-        listItem.classList.add('line') //gracias
+        listItem.classList.add('line')
     }
-
 
     allButtons.appendChild(createButton('trash', index, deleteTask))
     allButtons.appendChild(createButton(toggleImage, index, toggleTask))
-
     listItem.appendChild(allButtons)
     return listItem
+
 }
+
 
 var createButton = function (classBtn, index, btnFunction) {
     btn = document.createElement('button')
@@ -55,28 +49,21 @@ var createButton = function (classBtn, index, btnFunction) {
     return btn
 }
 
-
-var editItem = function () {
-    // input.disabled = false;
-    // input.classList.remove('hidden')
-    // input.onKeyPress = function(event){ actuallyEditItem(e, input) }
-}
-
-var actuallyEditItem = function (e, input) {
-    // valida que sea el enter
-    // allTasks[btn.id].text = input.value
-    // reimprime todo al carajo
-}
-
 var toggleTask = function (btn) {
     allTasks[btn.id].isCompleted = !allTasks[btn.id].isCompleted
-
     printTask()
 }
 
+
 var deleteTask = function (btn) {
+    var deleteTask = confirm('¿Estás segurx de borrar esta tarea?');
+    if (deleteTask){
     allTasks.splice(btn.id, 1)
-    printTask()
+        return printTask();
+    } else {
+    return false;
+    }
+
 }
 
 var printTask = function () {
@@ -86,11 +73,11 @@ var printTask = function () {
     completed.innerHTML = ''
 
     allTasks.map(function (task, index) {
-        task.isCompleted ? completed.appendChild(createLi(task, index)) : todo.appendChild(createLi(task, index))
+    task.isCompleted ? completed.appendChild(createLi(task, index)) : todo.appendChild(createLi(task, index))
     })
-
     blankText(toDo, '¡Excelente!' + '\n\nNo tenés ninguna tarea pendiente')
     blankText(completed, '¡Ánimo!' + '\n\nCuando completes tus tareas van a aparecer acá')
+    guardarTarea();
 }
 
 var addTask = function () {
@@ -102,4 +89,25 @@ var addTask = function () {
         allTasks.unshift({ text: newTask, isCompleted: false })
         printTask()
     }
+
 }
+
+var guardarTarea = function(){
+    localStorage.setItem('tareas', JSON.stringify(allTasks))
+}
+
+var prinTarea = function(){
+    var toDo = document.getElementById('todo');
+    toDo.innerHTML = '' ;
+    allTasks = JSON.parse(localStorage.getItem('tareas'));
+    if (allTasks == null){
+        allTasks = [];
+    }
+    
+}
+
+var onLoad = function(){
+    prinTarea();
+    printTask()
+}
+

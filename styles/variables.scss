@@ -10,7 +10,6 @@ $test: 100px;
 
 @mixin card-align($width) {
 }
-
 @mixin relative($float) {
   position: relative;
   float: $float;
@@ -19,6 +18,7 @@ $test: 100px;
 
 @mixin card($decoration) {
   @include relative(left);
+  width: 100%;
   box-sizing: border-box;
   border-radius: 8px;
   box-shadow: $shadow;
