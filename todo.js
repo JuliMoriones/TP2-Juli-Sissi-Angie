@@ -73,7 +73,11 @@ var printTask = function () {
     completed.innerHTML = ''
 
     allTasks.map(function (task, index) {
-    task.isCompleted ? completed.appendChild(createLi(task, index)) : todo.appendChild(createLi(task, index))
+        if (task.isCompleted){ 
+         completed.appendChild(createLi(task, index)) 
+        } else { 
+         todo.appendChild(createLi(task, index))
+        }
     })
     blankText(toDo, '¡Excelente!' + '\n\nNo tenés ninguna tarea pendiente')
     blankText(completed, '¡Ánimo!' + '\n\nCuando completes tus tareas van a aparecer acá')
