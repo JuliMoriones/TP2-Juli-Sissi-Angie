@@ -111,6 +111,7 @@ input {
     .task {
       @include card(line-through);
       .task-text {
+        // y estos pixeles con decimales?
         width: calc(100% - 94.31px);
       }
     }

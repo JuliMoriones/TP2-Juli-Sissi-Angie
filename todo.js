@@ -79,6 +79,7 @@ var printTask = function () {
          todo.appendChild(createLi(task, index))
         }
     })
+    // estos saltos de linea general <br> que no son muy recomendado usar
     blankText(toDo, '¡Excelente!' + '\n\nNo tenés ninguna tarea pendiente')
     blankText(completed, '¡Ánimo!' + '\n\nCuando completes tus tareas van a aparecer acá')
     guardarTarea();
@@ -115,3 +116,21 @@ var onLoad = function(){
     printTask()
 }
 
+/*
+
+                Amo todo <3 
+
+            *                 / )
+         *    (\__/) *       ( (  *
+       ,-.,-.,)    (.,-.,-.,-.) ).,-.,-.
+      | @|  ={      }= | @|  / / | @|o |
+     _j__j__j_)     `-------/ /__j__j__j_
+     ________(               /___________
+      |  | @| \              || o|O | @|
+      |o |  |,'\       ,   ,'"|  |  |  |
+     vV\|/vV|`-'\  ,---\   | \Vv\hjwVv\//
+                _) )    `. \ /
+               (__/       ) )
+                         (_/
+
+*/
